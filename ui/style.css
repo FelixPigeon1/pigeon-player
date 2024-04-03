@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+body { 
+  background-image: linear-gradient(#3a7a94, #244f60);
+  background-attachment: fixed;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "album queue library"
+    "player queue library";
+  height: 96vh;
+  column-gap: 10px;
+  width: 100%;
+}
+
+.album-art-container {
+  grid-area: album;
+  width: 100%;
+  justify-self: center;
+}
+.album-art-container > img{
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  max-height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+.album-art {
+  place-self: center;
+}
+
+.album-player-container {
+  grid-column: 1;
+  background-color: #244f60;
+  border-radius: 5px;
+}
+
+.player-control-container {
+  padding-top: 20%;
+  text-align: center;
+}
+
+.queue-container {
+    grid-column: 2;
+    background-color: #244f60;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.library-container {
+  grid-column: 3;
+  background-color: #244f60; 
+  border-radius: 5px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.titlebar {
+    height: 30px;
+    background: #329ea3;
+    user-select: none;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .titlebar-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+  .titlebar-button:hover {
+    background: #5bbec3;
+  }
